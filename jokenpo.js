@@ -28,17 +28,18 @@ do{
     
     
   
-        //Deixar o Pc escolher Aleatoriamente e depois Mostrar as Escolhas do PC e do jogador
+        //Deixar o Pc escolher Aleatoriamente 
         let escolhapc = Math.floor(Math.random() * 3 );
-        console.log(`\nO jogador ${nome} escolheu ${jokenpo[minhaescolha]}\ne o Pc Escolheu ${jokenpo[escolhapc]}\n`);
-
+        
         //Contador pra Determinar o Numero de Vitórias
         if((escolhapc == 0 && minhaescolha == 2) || (escolhapc == 1 && minhaescolha == 0) || (escolhapc == 2 && minhaescolha == 1)){
             contpc++
         }else if ((minhaescolha == 0 && escolhapc == 2) || (minhaescolha == 1 && escolhapc == 0) || (minhaescolha == 2 && escolhapc == 1)){
             contplayer++
         } 
-        console.log(`${nome}: ${contplayer} x ${contpc}: PC `);//Imprimir o Resultado da Partida
+        //Mostra as escolhas do Pc e do Jogador e Depois Imprime o Resultado da Rodada(Observação:Ao executar o código no terminal,Suba um pouco para ver o resultado da rodada)
+        console.log(`\nO jogador ${nome} escolheu ${jokenpo[minhaescolha]}\ne o Pc Escolheu ${jokenpo[escolhapc]}\n`);
+        console.log(`${nome}: ${contplayer} x ${contpc}: PC `);
         console.log();
     }
 
