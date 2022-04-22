@@ -1,17 +1,21 @@
 const prompt = require('prompt-sync')();
-const jokenpo = ['Pedra','Papel','Tesoura'];
+const jokenpo = ['Pedra','Papel','Tesoura']; //Lista com as opções de jogada
 
 console.log('JOKENPÔ');//Titulo do jogo
 console.log('\n\n');
 let nome = prompt(`Qual o seu nome: `);//pergunta para saber o nome do jogador
 console.log('\n\n');
 
+
+ //Laço de repetição caso o jogador queira jogar novamente
 do{
-    //Laço de repetição caso o jogador queira jogar novamente
+   
     let rodadas = +prompt(`Quantas Rodadas Você deseja jogar: `);
     console.clear();
-    //Variáveis para contar as vitórias
-    var contpc = 0
+    
+    
+   //Variáveis para contar as vitórias
+    var contpc = 0   
     var contplayer = 0
     let minhaescolha;
 
@@ -37,6 +41,8 @@ do{
         }else if ((minhaescolha == 0 && escolhapc == 2) || (minhaescolha == 1 && escolhapc == 0) || (minhaescolha == 2 && escolhapc == 1)){
             contplayer++
         } 
+        
+        
         //Mostra as escolhas do Pc e do Jogador e Depois Imprime o Resultado da Rodada(Observação:Ao executar o código no terminal,Suba um pouco para ver o resultado da rodada)
         console.log(`\nO jogador ${nome} escolheu ${jokenpo[minhaescolha]}\ne o Pc Escolheu ${jokenpo[escolhapc]}\n`);
         console.log(`${nome}: ${contplayer} x ${contpc}: PC `);
